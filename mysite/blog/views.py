@@ -1,12 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . import models
-
+from django.http import JsonResponse
 from django.core.paginator import Paginator
+from django.db import connection
 
 # Create your views here.
-def helloworld(request):
-    return HttpResponse("Hello World!!!")
+
+# api test
+def hello(request):
+    dictdata = {'result':200,'msg':'连接成功！！！'}
+    return JsonResponse(dictdata)
 
 def index(request):
     page=request.GET.get('page')
@@ -59,9 +63,9 @@ def get_detail_page(request,article_id):
 
 
     return render(request, 'blog/detail.html',
-                  {
-                      'article':article,
-                      'previous_article':previous_article,
-                      'next_article':next_article
-                  }
-                  )
+                      {
+                          'article':article,
+                          'previous_article':previous_article,
+                          'next_article':next_article
+                      }
+                 )

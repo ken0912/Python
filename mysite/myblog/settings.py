@@ -85,13 +85,13 @@ DATABASES = {
 # DATABASES = {
 #   'default': {
 #     'ENGINE': 'sql_server.pyodbc',			        # odbc连接固定写法
-#     'NAME': 'Blog',				            # 自定义数据库连接名
+#     'NAME': 'DB1',				                    # 自定义数据库连接名
 #     'USER': 'sa',					                # 数据库连接账户
 #     'PASSWORD': 'Salary.com',				        # 数据库连接密码
-#     'HOST': '127.0.0.1',				            # 数据库服务地址
+#     'HOST': 'PTPC-39PWGQ2\SQL2016',				    # 数据库服务地址
 #     'PORT': '1433',					                # 数据库连接端口
 #     'OPTIONS':{
-#         'driver':'SQL Server Native Client 11.0',	# ODBC连接应用驱动
+#         'driver':'ODBC Driver 17 for SQL Server',	# ODBC连接应用驱动
 #         'MARS_Connection': True,
 #     }
 #   }
