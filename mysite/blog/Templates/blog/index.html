@@ -37,7 +37,7 @@
 <body>
 
 <div class="container page-header">
-    <h1><a href="/blog/index">博客</a>
+    <h1><a href="{% url 'blog:index' %}">博客{{ username }}</a>
         <small>-----好多鱼</small>
     </h1>
 {#    <div>#}
@@ -52,7 +52,7 @@
         <div class="body-main">
             {% for article in articles %}
             <div>
-               <h2><a href="/blog/detail/{{ article.article_id }}">{{ article.title }}</a></h2>
+               <h2><a href="{% url 'blog:detail' article.article_id %}">{{ article.title }}</a></h2>
                <p>{{ article.brief_content }}</p>
             </div>
             {% endfor %}

@@ -16,3 +16,22 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+class User(models.Model):
+
+    #id
+    id = models.AutoField(primary_key=True)
+    #username
+    username = models.TextField(max_length=64)
+    #password
+    password = models.CharField(max_length=128)
+
+    #email
+
+    email = models.TextField(max_length=64)
+    #registerdate
+
+    registerdate = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.username
